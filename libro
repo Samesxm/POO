@@ -1,0 +1,48 @@
+internal class Program
+{
+
+    public class menu
+    {
+        static int mostrarMenu()
+        {
+            Console.WriteLine("0.Ingresar Libro.\n1.Mostrar Libros\nSeleccioone una opcion: ");
+            return (int.Parse(Console.ReadLine()));
+
+        }
+        public class libro
+        {
+            int anho;
+            string nombre, editorial;
+
+            public void ingresarLibro()
+            {
+                Console.WriteLine("Nombre del libro que quieres ingresar: ");
+                nombre = Console.ReadLine();
+            }
+
+            public void printarLibros()
+            {
+                Console.WriteLine(nombre);
+            }
+        }
+
+        private static void Main(string[] args)
+        {
+            libro objLibro = new libro();
+            menu objMenu = new menu();
+            int optiOn;
+
+            optiOn = mostrarMenu();
+
+            switch (optiOn)
+            {
+                case 0:
+                    objLibro.ingresarLibro();
+                    break;
+                case 1:
+                    objLibro.printarLibros();
+                    break;
+            }
+        }
+    }
+}
