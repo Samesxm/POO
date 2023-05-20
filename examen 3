@@ -1,0 +1,50 @@
+using System;
+using System.Collections;
+using System.Security.Cryptography.X509Certificates;
+
+// Clase abstracta Animal
+abstract class Animal
+{
+    public abstract void dormir(); // Método abstracto
+}
+
+// Clase Leon que hereda de Animal
+class Leon : Animal
+{
+    public override void dormir()
+    {
+        Console.WriteLine("El león duerme sobre el vientre");
+    }
+}
+
+// Clase Oso que hereda de Animal
+class Oso : Animal
+{
+    public override void dormir()
+    {
+        Console.WriteLine("El oso dueme sobre la espalda");
+    }
+}
+
+// Clase Tigre que hereda de Animal
+class Tigre : Animal
+{
+    public override void dormir()
+    {
+        Console.WriteLine("El tigre duerme sobre un arbol");
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Leon leon = new Leon();
+        Oso oso = new Oso();
+        Tigre tigre = new Tigre();
+
+        leon.dormir();
+        oso.dormir();
+        tigre.dormir();
+    }
+}
